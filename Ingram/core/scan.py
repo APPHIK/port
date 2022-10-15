@@ -37,7 +37,7 @@ class Scan:
                         res = mod(f"{ip}:{port}")
                         if res[0]:
                             vulnerable = True
-                            msg = [ip, port, device] + res[1:]
+                            msg = [device, ip, port] + res[1:]
                             self.workshop.put(msg)
                             self.data.found_add()
                             self.data.vul_add(','.join(msg[:6]) + '\n')
