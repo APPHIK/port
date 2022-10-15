@@ -11,7 +11,204 @@ Initialization: Network Camera
 """
 
 
+ingram_fonts = [
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera          
+""",
 
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                                    
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                               
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                      
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                         
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera   
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera    
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                                       
+             
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                      
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+  TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera   
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                     
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                              
+""",
+
+r"""
+   TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera  
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera             
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera  
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera   
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera                     
+""",
+
+r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera 
+""",
+]
 
 
 def generate_logo() -> list:
