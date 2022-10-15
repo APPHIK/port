@@ -1,59 +1,57 @@
-"""Terminal Format"""
-#============================= colorama =============================
-# Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
-# Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
-# Style: DIM, NORMAL, BRIGHT, RESET_ALL
-#====================================================================
-from colorama import init, Fore, Style
-
-from Ingram.utils.base import os_check
-from Ingram.utils.base import singleton
+"""logo"""
+import os
+import random
 
 
-# wrap must be True when the os is windows
-if os_check() == 'windows': init(wrap=True)
+ingram_icon = r"""
+TOOL: Scan Database Camera 
+To: ROY (AppHik.TK)
+Design: Open Souce Edit
+Initialization: Network Camera  
+"""
 
 
-def _style(s, style):
-    styles = {'dim': Style.DIM, 'normal': Style.NORMAL, 'bright': Style.BRIGHT}
-    if style not in styles: style = 'normal'
-    return styles[style] + s + Style.RESET_ALL
 
 
-@singleton
-class ColorPalette:
 
-    @staticmethod
-    def red(s, style='normal'):
-        return _style(Fore.RED + str(s) + Fore.RESET, style)
+def generate_logo() -> list:
+    """concatenate the icon and font"""
+    icon = [i for i in ingram_icon.split('\n') if i.strip()]
+    icon_width = max([len(i) for i in icon])
+    icon = [' ' * icon_width] + icon + [' ' * icon_width]
+    icon_height = len(icon)
 
-    @staticmethod
-    def black(s, style='normal'):
-        return _style(Fore.BLACK + str(s) + Fore.RESET, style)
+    # do not longger than the terminal width!!!
+    found = False
+    for _ in range(100):
+        font = random.choice(ingram_fonts).split('\n')
+        font_width = max([len(i) for i in font])
+        font_height = len(font)
+        if font_width + icon_width + 2 < os.get_terminal_size()[0]:
+            found = True
+            break
+    if not found:
+        font = ['']
+        font_height = 1
 
-    @staticmethod
-    def green(s, style='normal'):
-        return _style(Fore.GREEN + str(s) + Fore.RESET, style)
-
-    @staticmethod
-    def yellow(s, style='normal'):
-        return _style(Fore.YELLOW + str(s) + Fore.RESET, style)
-
-    @staticmethod
-    def blue(s, style='normal'):
-        return _style(Fore.YELLOW + str(s) + Fore.RESET, style)
-
-    @staticmethod
-    def magenta(s, style='normal'):
-        return _style(Fore.MAGENTA + str(s) + Fore.RESET, style)
-
-    @staticmethod
-    def cyan(s, style='normal'):
-        return _style(Fore.CYAN + str(s) + Fore.RESET, style)
-
-    @staticmethod
-    def white(s, style='normal'):
-        return _style(Fore.WHITE + str(s) + Fore.RESET, style)
+    if icon_height > font_height:
+        num = icon_height - font_height
+        if num & 1: head, tail = num // 2, num // 2 + 1
+        else: head, tail = num // 2, num // 2
+        font = [' '] * head + font + [' '] * tail
+    
+    elif icon_height < font_height:
+        num = font_height - icon_height
+        if num & 1: head, tail = num // 2, num // 2 + 1
+        else: head, tail = num // 2, num // 2
+        icon = [' ' * icon_width] * head + icon + [' ' * icon_width] * tail
+    
+    return [icon, font]
 
 
-color = ColorPalette()
+logo = generate_logo()
+
+
+if __name__ == '__main__':
+    for left, right in zip(*logo):
+        print(f"{left}  {right}")
